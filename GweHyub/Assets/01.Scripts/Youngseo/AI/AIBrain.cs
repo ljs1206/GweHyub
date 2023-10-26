@@ -14,6 +14,7 @@ public class AIBrain : MonoBehaviour
         GetComponentsInChildren(_states);
         
         _states.ForEach(state => state.SetUp(this.transform));
+        _currentState.OnEnterState();
     }
 
     private void Update()
