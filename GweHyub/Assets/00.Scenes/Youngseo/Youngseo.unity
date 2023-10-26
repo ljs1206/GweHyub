@@ -216,7 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _brain: {fileID: 1458537818}
   IsReverse: 0
-  _range: 1
+  _range: 4
 --- !u!114 &582309076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddb2125cd974da7971932e206e8d155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 3
+  _speed: 4
 --- !u!4 &852011913
 Transform:
   m_ObjectHideFlags: 0
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _brain: {fileID: 1458537818}
   IsReverse: 1
-  _range: 1
+  _range: 4
 --- !u!114 &1447304550
 MonoBehaviour:
   m_ObjectHideFlags: 0
