@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(AITransition))]
 public abstract class AIDecision : MonoBehaviour
 {
     [SerializeField] protected AIBrain _brain;
