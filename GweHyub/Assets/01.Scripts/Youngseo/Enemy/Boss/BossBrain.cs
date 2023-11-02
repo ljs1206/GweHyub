@@ -1,9 +1,6 @@
 using UnityEngine;
 
-namespace _01.Scripts.Youngseo.Enemy.Boss
+public class BossBrain : MonoBehaviour
 {
-    public class BossBrain : MonoBehaviour
-    {
-        
-    }
+    
 }
