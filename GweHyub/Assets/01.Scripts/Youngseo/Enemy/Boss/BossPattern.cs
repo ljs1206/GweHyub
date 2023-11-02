@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BossPattern : MonoBehaviour
+public abstract class BossPattern : MonoBehaviour
 {
-    
+    public abstract void Attack();
 }
