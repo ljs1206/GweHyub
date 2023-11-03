@@ -10,7 +10,10 @@ public class _Guseulchigi : MonoBehaviour
     [SerializeField]
     private LayerMask layer;
 
-    private void Attack
+    private void Attack()
+    {
+
+    }
 
     private Collider2D[] CheckEnemy()
     {
