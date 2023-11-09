@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class Air : MonoBehaviour
+public class Air : Skills
 {
     private ParticleSystem gonggiEffect;
     private CapsuleCollider2D capsuleCollider;
