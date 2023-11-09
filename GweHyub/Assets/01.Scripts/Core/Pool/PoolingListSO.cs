@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable] // ÀÎ½ºÆåÅÍ¿¡ Á÷·ÄÈ­
+[System.Serializable] // ì¸ìŠ¤í™í„°ì— ì§ë ¬í™”
 public struct PoolingPair
 {
     public PoolableMono prefab;

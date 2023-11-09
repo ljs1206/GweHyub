@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance; // ¸ð¸£¸é ¾ÈµÊ
+    public static GameManager Instance; // ï¿½ð¸£¸ï¿½ ï¿½Èµï¿½
 
     #region property
 
     #endregion
 
     #region private
-    private PoolingListSO _poolingListSO;
+    [SerializeField] private PoolingListSO _poolingListSO;
     #endregion
 
     private void OnEnable()
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     private void CreatePoolManager()
     {
         PoolManager.Instance = new PoolManager(transform);
-        // ¿©±â¿¡ ÇÊ¿äÇÑ ¾Öµé Ç® ¸¸µé¾îÁà¾ß ÇÔ
+        // ï¿½ï¿½ï¿½â¿¡ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½Öµï¿½ Ç® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
         foreach (PoolingPair pair in _poolingListSO.pairs)
         {
             PoolManager.Instance.CreatePool(pair.prefab, pair.Count);

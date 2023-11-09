@@ -1,10 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Pool<T> where T : PoolableMono
 {
-    //poolableMono¸¦ »ó¼Ó ¹ÞÀº ¸ðµç ¾ÖµéÀº T¿¡ ¿Ã ¼ö ÀÖ´Ù.
+    //poolableMonoï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Öµï¿½ï¿½ï¿½ Tï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½.
     private Stack<T> _pool = new Stack<T>();
     private T _prefab;
     private Transform _parent;
@@ -27,15 +26,15 @@ public class Pool<T> where T : PoolableMono
     {
         T obj = null;
 
-        if (_pool.Count <= 0) // Ç®¿¡ ³²Àº°Ô ¾øÀ½
+        if (_pool.Count <= 0) // Ç®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         {
             obj = GameObject.Instantiate(_prefab, _parent);
             obj.gameObject.name = obj.gameObject.name.Replace("(Clone)", "");
         }
-        else //Ç®¿¡ ³²Àº°Ô ÀÖ´Ù
+        else //Ç®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½
         {
             obj = _pool.Pop();
-            obj.gameObject.SetActive(true); //¾×Æ¼ºê¸¸ ÄÑ¼­ µ¹·ÁÁà
+            obj.gameObject.SetActive(true); //ï¿½ï¿½Æ¼ï¿½ê¸¸ ï¿½Ñ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         }
 
         return obj;
