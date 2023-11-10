@@ -18,17 +18,6 @@ public class Air : Skills
         capsuleCollider.enabled = false;
     }
 
-    private void Update()
-    {
-        #region DebugCode
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            capsuleCollider.enabled = true;
-            PlantAir();
-        }
-        #endregion
-    }
-
     public void PlantAir()
     {
         transform.DOScale(1, 0.3f).SetEase(Ease.InOutBounce);

@@ -21,16 +21,6 @@ public class _Guseulchigi : Skills
         player = GameObject.FindWithTag("Player");
     }
 
-    private void Update()
-    {
-        #region Debug
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Attack();
-        }
-        #endregion
-    }
-
     public void Attack()
     {
         if (CheckEnemy()[0] == null)

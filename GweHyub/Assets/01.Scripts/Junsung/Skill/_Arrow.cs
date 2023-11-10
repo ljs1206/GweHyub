@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class _Arrow : Skills
 {
@@ -22,23 +23,20 @@ public class _Arrow : Skills
         arrowAnimator = transform.Find("Arrow").GetComponent<Animator>();
     }
 
-    private void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Shot();
-        }
+        print(arrowAnimator.GetBool("isAttack"));
     }
 
     public void Shot()
     {
         bowAnimator.SetBool("isAttack", true);
-        arrowAnimator.SetBool("isAttack", true);
+        //arrowAnimator.SetBool("isAttack", true);
     }
 
     public void MoveArrowEnd()
     {
-        arrowAnimator.SetBool("isAttack", false);
+        //arrowAnimator.SetBool("isAttack", false);
         bowAnimator.SetBool("isAttack", false);
     }
 
@@ -54,6 +52,7 @@ public class _Arrow : Skills
     public void ShotArrow()
     {
         print(transform.GetChild(0));
+        child.transform.localPosition = Vector3.zero;
         child.transform.Translate(Vector3.right * (Time.deltaTime * speed));
     }
 }
