@@ -3,6 +3,8 @@ using UnityEngine.Events;
 
 public class AgentHp : MonoBehaviour
 {
+    [SerializeField] private int _expAmount;
+    
     private int _curHp;
 
     public int CurHp
@@ -15,7 +17,11 @@ public class AgentHp : MonoBehaviour
             if (_curHp <= 0)
             {
                 OnDie?.Invoke();
-                Debug.Log("Die");
+                if (TryGetComponent(out AIBrain brain))
+                {
+                    PoolManager.Instance.Push(brain);
+                    LevelManager.Instance.ExpUp(_expAmount, null);
+                }
             }
         }
     }
@@ -24,7 +30,7 @@ public class AgentHp : MonoBehaviour
 
     private void Awake()
     {
-        _curHp = _maxHp;
+        CurHp = _maxHp;
     }
 
     public void Damaged(int damage)

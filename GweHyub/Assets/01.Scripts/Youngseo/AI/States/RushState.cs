@@ -7,7 +7,7 @@ public class RushState : AIState
     
     public override void OnEnterState()
     {
-        _dir = _brain.PlayerTrm.position - transform.position;
+        _dir = _brain.PlayerTrm.position - _brain.transform.position;
     }
 
     public override void OnExitState()

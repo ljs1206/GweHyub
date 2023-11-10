@@ -1,8 +1,6 @@
-using System;
 using UnityEngine;
-using Vector3 = UnityEngine.Vector3;
 
-public class FoxMarble : MonoBehaviour
+public class FoxMarble : PoolableMono
 {
     [SerializeField] private float _speed = 15f;
     private Vector3 _dir;
@@ -12,14 +10,20 @@ public class FoxMarble : MonoBehaviour
         Init();
     }
 
-    public void Init()
+    public override void Init()
     {
-        _dir = transform.right;
+        
     }
 
     private void Update()
     {
         transform.position += _dir * (Time.deltaTime * _speed);
         transform.rotation *= Quaternion.Euler(0, 0, 500 * Time.deltaTime);
+    }
+
+    public void SetPositionAndRotation(Vector3 pos, Quaternion rot)
+    {
+        transform.SetPositionAndRotation(pos, rot);
+        _dir = transform.right;
     }
 }

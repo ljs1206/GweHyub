@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ChaseState : AIState
 {
-    [SerializeField] private float _speed = 3f;
+    public float _speed = 3f;
     
     public override void OnEnterState()
     {
