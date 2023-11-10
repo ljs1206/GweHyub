@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class _Jwibulnori : MonoBehaviour
+public class _Jwibulnori : Skills
 {
     [SerializeField]
     private float rotateSpeed;

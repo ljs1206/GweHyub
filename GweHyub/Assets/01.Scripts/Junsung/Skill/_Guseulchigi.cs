@@ -3,19 +3,14 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 
-public class _Guseulchigi : MonoBehaviour
+public class _Guseulchigi : Skills
+
 {
-    [Header("Overlap")]
-    [SerializeField]
-    private Vector2 point;
-    [SerializeField]
-    private float radius;
-    [SerializeField]
-    private LayerMask layer;
-    [SerializeField]
-    private item guseulchigi;
 
     [Header("MoveVariable")]
+    [SerializeField]
+    private item guseulchigi;
+    [SerializeField]
     private float moveValue;
 
     private List<Vector3> distanceRank = new();
@@ -24,16 +19,6 @@ public class _Guseulchigi : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindWithTag("Player");
-    }
-
-    private void Update()
-    {
-        #region Debug
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Attack();
-        }
-        #endregion
     }
 
     public void Attack()
@@ -75,16 +60,5 @@ public class _Guseulchigi : MonoBehaviour
             transform.DOMove(distanceRank[i], 0.3f);
         }
 
-    }
-
-    private Collider2D[] CheckEnemy()
-    {
-        return Physics2D.OverlapCircleAll((Vector2)transform.position + point, radius, layer);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere((Vector2)transform.position + point, radius);
     }
 }

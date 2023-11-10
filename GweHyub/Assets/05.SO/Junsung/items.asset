@@ -16,48 +16,78 @@ MonoBehaviour:
   - name: Jwibulnori
     power: 0
     attackDelay: 0
+    range: 0
+    speed: 0
+    holdingTime: 0
+    knockBackRange: 0
+    Size: 0
+    chainCount: 0
+    sprite: {fileID: 21300000, guid: 9fb74c2fe75c9e74e936122bb49cd2ce, type: 3}
     skill:
       m_PersistentCalls:
         m_Calls: []
   - name: ' Guseulchigi'
     power: 0
     attackDelay: 0
+    range: 0
+    speed: 0
+    holdingTime: 0
+    knockBackRange: 0
+    Size: 0
+    chainCount: 0
+    sprite: {fileID: 21300000, guid: 582d2cbd9aadda24eb99d70e6b2abf6a, type: 3}
     skill:
       m_PersistentCalls:
         m_Calls: []
   - name: Gonggi
     power: 0
     attackDelay: 0
-    skill:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: Jegi
-    power: 0
-    attackDelay: 0
-    skill:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: Top
-    power: 0
-    attackDelay: 0
+    range: 0
+    speed: 0
+    holdingTime: 0
+    knockBackRange: 0
+    Size: 0
+    chainCount: 0
+    sprite: {fileID: 21300000, guid: a6beb50924119bc4b8936bcf5fa8d561, type: 3}
     skill:
       m_PersistentCalls:
         m_Calls: []
   - name: HongikIngan
     power: 0
     attackDelay: 0
+    range: 0
+    speed: 0
+    holdingTime: 0
+    knockBackRange: 0
+    Size: 0
+    chainCount: 0
+    sprite: {fileID: 21300000, guid: ec85ff0d1e7a1fc4aa992c8ad845493e, type: 3}
     skill:
       m_PersistentCalls:
         m_Calls: []
   - name: Archery
     power: 0
     attackDelay: 0
+    range: 0
+    speed: 0
+    holdingTime: 0
+    knockBackRange: 0
+    Size: 0
+    chainCount: 0
+    sprite: {fileID: 21300000, guid: d9937c3ee9423f1479b21a5223a14629, type: 3}
     skill:
       m_PersistentCalls:
         m_Calls: []
   - name: Gulleongsoe
     power: 0
     attackDelay: 0
+    range: 0
+    speed: 0
+    holdingTime: 0
+    knockBackRange: 0
+    Size: 0
+    chainCount: 0
+    sprite: {fileID: 21300000, guid: 53ae2659c2728e941a0ef170095c2108, type: 3}
     skill:
       m_PersistentCalls:
         m_Calls: []

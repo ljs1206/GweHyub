@@ -14,6 +14,7 @@ public struct item // 전통놀이 아이템
     public float knockBackRange;
     public float Size;
     public float chainCount;
+    public Sprite sprite;
 
     public UnityEvent skill;
 }

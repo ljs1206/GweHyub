@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class Air : MonoBehaviour
+public class Air : Skills
 {
     private ParticleSystem gonggiEffect;
     private CapsuleCollider2D capsuleCollider;
@@ -16,17 +16,6 @@ public class Air : MonoBehaviour
     {
         transform.localScale = Vector3.zero;
         capsuleCollider.enabled = false;
-    }
-
-    private void Update()
-    {
-        #region DebugCode
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            capsuleCollider.enabled = true;
-            PlantAir();
-        }
-        #endregion
     }
 
     public void PlantAir()
