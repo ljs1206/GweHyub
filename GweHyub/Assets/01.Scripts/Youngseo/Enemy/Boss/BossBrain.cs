@@ -16,7 +16,7 @@ public class BossBrain : MonoBehaviour
     private void Awake()
     {
         _chaseState = GetComponentInChildren<ChaseState>();
-        GetComponentsInChildren(_patterns);
+        GetComponentsInChildren(_patterns); 
     }
 
     private void Update()
@@ -29,7 +29,7 @@ public class BossBrain : MonoBehaviour
 
     private BossPattern ChoosePattern()
     { 
-        int rdIdx;
+        int rdIdx; 
         do rdIdx = Random.Range(0, _patterns.Count); 
         while (rdIdx == _prevIdx);
         _prevIdx = rdIdx;
