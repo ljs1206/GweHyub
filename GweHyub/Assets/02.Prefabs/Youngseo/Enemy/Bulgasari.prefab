@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6196272152889603951}
   - component: {fileID: 8564962976923469}
   - component: {fileID: 1884926961042030160}
-  - component: {fileID: -5802305020229768178}
+  - component: {fileID: 1097499818105591046}
   m_Layer: 0
   m_Name: Bulgasari
   m_TagString: Untagged
@@ -68,8 +68,8 @@ MonoBehaviour:
   OnDie:
     m_PersistentCalls:
       m_Calls: []
---- !u!58 &-5802305020229768178
-CircleCollider2D:
+--- !u!70 &1097499818105591046
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -101,8 +101,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 4.18, y: 2.67}
+  m_Direction: 1
 --- !u!1 &2244103287631248913
 GameObject:
   m_ObjectHideFlags: 0

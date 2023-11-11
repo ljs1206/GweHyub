@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Skills : MonoBehaviour
 {
+    [SerializeField] protected int _damage;
     [Header("Overlap")]
     [SerializeField]
     private Vector2 point;

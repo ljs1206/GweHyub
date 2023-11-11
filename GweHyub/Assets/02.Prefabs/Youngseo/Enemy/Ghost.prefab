@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 7520840210600945173}
   - component: {fileID: 3116112216576013262}
   - component: {fileID: -1127760258499840597}
-  - component: {fileID: 8656228341420345613}
+  - component: {fileID: 1460069319427290500}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -396,8 +396,8 @@ MonoBehaviour:
   OnDie:
     m_PersistentCalls:
       m_Calls: []
---- !u!58 &8656228341420345613
-CircleCollider2D:
+--- !u!70 &1460069319427290500
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -425,12 +425,12 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 2}
+  m_Direction: 0
 --- !u!1 &5403486229900124802
 GameObject:
   m_ObjectHideFlags: 0

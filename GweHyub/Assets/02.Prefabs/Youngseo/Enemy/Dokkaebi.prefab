@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 7971269817112692681}
   - component: {fileID: 6702523506100602965}
   - component: {fileID: 7914215976145061164}
-  - component: {fileID: -3859009822186529454}
+  - component: {fileID: 6057469872327305200}
   m_Layer: 0
   m_Name: Dokkaebi
   m_TagString: Untagged
@@ -358,8 +358,8 @@ MonoBehaviour:
   OnDie:
     m_PersistentCalls:
       m_Calls: []
---- !u!58 &-3859009822186529454
-CircleCollider2D:
+--- !u!70 &6057469872327305200
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -390,9 +390,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Offset: {x: 0.25, y: 0}
+  m_Size: {x: 1, y: 2}
+  m_Direction: 0
 --- !u!1 &6326653649387855601
 GameObject:
   m_ObjectHideFlags: 0
