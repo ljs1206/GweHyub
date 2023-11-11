@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [SerializeField] private float _bossSpawnTime;
     private float _lastSpawnTime = -9999f;
     private float _currentTime = 0;
 
@@ -30,7 +31,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnBoss()
     {
-        if (Time.time > 3)
+        if (Time.time > _bossSpawnTime)
         {
             Debug.Log(9);
             AIBrain boss = PoolManager.Instance.Pop("Boss") as AIBrain;

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class FoxMarble : PoolableMono
@@ -25,5 +26,13 @@ public class FoxMarble : PoolableMono
     {
         transform.SetPositionAndRotation(pos, rot);
         _dir = transform.right;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.TryGetComponent(out AgentHp agent))
+        {
+            agent.Damaged(10);
+        }
     }
 }

@@ -16,20 +16,14 @@ public class DeadMarch : BossPattern
         float currentTime = 0;
         float lastSpawnTime = -9999f;
         
-        while (currentTime < 6)
+        for (int i = 0; i < 3; i++)
         {
-            currentTime += Time.deltaTime;
-            if (2 < Time.time - lastSpawnTime)
+            for (int j = 0; j < 15; j++)
             {
-                lastSpawnTime = Time.time;
-
-                for (int i = 0; i < 15; i++)
-                {
-                    StartCoroutine(JangSeungCoroutine());
-                }
+                StartCoroutine(JangSeungCoroutine());
             }
-            
-            yield return null;
+
+            yield return new WaitForSeconds(2f);
         }
     }
 
