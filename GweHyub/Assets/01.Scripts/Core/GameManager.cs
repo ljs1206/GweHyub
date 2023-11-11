@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     {
         CreateLevelManager();
         CreatePoolManager();
+        Cursor.visible = false; 
     }
 
     private void CreatePoolManager()

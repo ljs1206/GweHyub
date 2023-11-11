@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private float _spawnDelay = 3f;
+    [SerializeField] private float _bossSpawnTime;
     private float _lastSpawnTime = -9999f;
+    private float _currentTime = 0;
 
     private void Update()
     {
@@ -18,11 +19,24 @@ public class EnemySpawner : MonoBehaviour
         else obj = PoolManager.Instance.Pop("Ghost") as AIBrain;
         
         obj.SetPosition(GetRandomPos());
+
+        SpawnBoss();
     }
 
     private Vector3 GetRandomPos()
     {
         float rdRad = Random.Range(-Mathf.PI, Mathf.PI);
         return new Vector3(Mathf.Cos(rdRad), Mathf.Sin(rdRad)) * 25 + transform.position;
+    }
+
+    private void SpawnBoss()
+    {
+        if (Time.time > _bossSpawnTime)
+        {
+            Debug.Log(9);
+            AIBrain boss = PoolManager.Instance.Pop("Boss") as AIBrain;
+            boss.SetPosition(GetRandomPos() / 5);
+            enabled = false;
+        }
     }
 }

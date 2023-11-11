@@ -8,6 +8,8 @@ public class AIBrain : PoolableMono
     public Transform PlayerTrm;
     public float lastAtkTime = -9999f;
 
+    [SerializeField] private bool _isLookPlayer = true;
+
     private void Awake()
     {
         PlayerTrm = GameObject.FindWithTag("Player").transform; 
@@ -21,6 +23,7 @@ public class AIBrain : PoolableMono
     private void Update()
     {
         _currentState.UpdateState(); //현재 스테이트를 계속 업데이트 해줌
+        LookPlayer();
     }
 
     public void ChangeState(AIState state)
@@ -39,5 +42,11 @@ public class AIBrain : PoolableMono
     {
         transform.position = pos;
         _currentState.OnEnterState();
+    }
+
+    private void LookPlayer()
+    {
+        if (_isLookPlayer == false) return;
+        transform.localScale = new Vector3(transform.position.x < PlayerTrm.position.x ? -1 : 1, 1, 1);
     }
 }

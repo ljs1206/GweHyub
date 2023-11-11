@@ -27,7 +27,7 @@ public class RedCircleEffect : PoolableMono
         transform.DOScale(new Vector3(scale, scale * 0.75f, 1), 1);
         _spriteRenderer.DOFade(0.5f, 1);
         yield return new WaitForSeconds(time);
-        Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, scale / 2, 1 << 6);
+        Collider2D[] cols = Physics2D.OverlapCapsuleAll(transform.position, new Vector2(scale, scale * 0.75f), CapsuleDirection2D.Horizontal, 0, 1 << 6);
         foreach (var col in cols)
         {
             if (col.TryGetComponent(out AgentHp agentHp))

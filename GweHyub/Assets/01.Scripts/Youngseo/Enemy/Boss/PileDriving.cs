@@ -21,6 +21,6 @@ public class PileDriving : BossPattern
         _pileTrm.position = transform.position + Vector3.up * _pileTrm.lossyScale.y;
         _pileTrm.DOMoveY(_pileTrm.position.y + 2, 1);
         yield return new WaitForSeconds(1f);
-        _pileTrm.DOMoveY(_pileTrm.position.y - 8f, 0.5f).SetEase(Ease.InCubic).OnComplete(() => _pileTrm.gameObject.SetActive(false));
+        _pileTrm.DOMoveY(_pileTrm.position.y - 14f, 0.5f).SetEase(Ease.InCubic).OnComplete(() => _pileTrm.gameObject.SetActive(false));
     }
 }

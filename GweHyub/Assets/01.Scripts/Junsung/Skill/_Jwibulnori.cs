@@ -1,5 +1,5 @@
+using System;
 using UnityEngine;
-using System.Collections;
 
 public class _Jwibulnori : Skills
 {
@@ -9,5 +9,13 @@ public class _Jwibulnori : Skills
     private void Update()
     {
         transform.Rotate(-Vector3.forward, Time.deltaTime * rotateSpeed);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.transform.TryGetComponent(out AgentHp agent))
+        {
+            agent.Damaged(_damage);
+        }
     }
 }

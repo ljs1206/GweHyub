@@ -7,6 +7,8 @@ public class RushState : AIState
     
     public override void OnEnterState()
     {
+        transform.localScale = new Vector3(transform.position.x < _brain.PlayerTrm.position.x ? -1 : 1, 1, 1);
+        
         _dir = _brain.PlayerTrm.position - _brain.transform.position;
     }
 

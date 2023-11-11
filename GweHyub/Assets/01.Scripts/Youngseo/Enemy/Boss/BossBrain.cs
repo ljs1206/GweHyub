@@ -4,20 +4,14 @@ using UnityEngine;
 
 public class BossBrain : MonoBehaviour
 {
-    private List<BossPattern> _patterns;
+    [SerializeField] private List<BossPattern> _patterns;
     private BossPattern _currentPattern;
     private int _prevIdx = -1;
 
     [SerializeField] private float _attackDelay;
     private float _lastAtkTime = -9999f;
 
-    private ChaseState _chaseState;
-
-    private void Awake()
-    {
-        _chaseState = GetComponentInChildren<ChaseState>();
-        GetComponentsInChildren(_patterns);
-    }
+    [SerializeField] private ChaseState _chaseState;
 
     private void Update()
     {
@@ -29,7 +23,7 @@ public class BossBrain : MonoBehaviour
 
     private BossPattern ChoosePattern()
     { 
-        int rdIdx;
+        int rdIdx; 
         do rdIdx = Random.Range(0, _patterns.Count); 
         while (rdIdx == _prevIdx);
         _prevIdx = rdIdx;

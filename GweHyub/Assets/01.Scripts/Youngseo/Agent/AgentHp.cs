@@ -26,6 +26,7 @@ public class AgentHp : MonoBehaviour
         }
     }
     [SerializeField] private int _maxHp = 3;
+    public UnityEvent<float> OnGetHit;
     public UnityEvent OnDie;
 
     private void Awake()
@@ -36,5 +37,6 @@ public class AgentHp : MonoBehaviour
     public void Damaged(int damage)
     {
         CurHp -= damage;
+        OnGetHit?.Invoke((float)CurHp / _maxHp);
     }
 }
