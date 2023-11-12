@@ -4,7 +4,7 @@ public class DeathState : AIState
 {
     public override void OnEnterState()
     {
-        _brain.GetComponent<AgentHp>().Damaged(1000);
+        PoolManager.Instance.Push(_brain);
     }
 
     public override void OnExitState()
