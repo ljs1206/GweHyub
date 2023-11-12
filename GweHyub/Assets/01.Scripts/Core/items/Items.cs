@@ -15,8 +15,7 @@ public struct item // 전통놀이 아이템
     public float Size;
     public float chainCount;
     public Sprite sprite;
-
-    public UnityEvent skill;
+    public string tooltip;
 }
 
 [CreateAssetMenu(menuName = "SO/item")]

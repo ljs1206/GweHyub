@@ -23,10 +23,9 @@ MonoBehaviour:
     Size: 0
     chainCount: 0
     sprite: {fileID: 21300000, guid: 9fb74c2fe75c9e74e936122bb49cd2ce, type: 3}
-    skill:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: ' Guseulchigi'
+    tooltip: It is summoned at a certain distance \\n from the player as the origin
+      \\n and rotates in a circle of flame.
+  - name: guseulchigi
     power: 0
     attackDelay: 0
     range: 0
@@ -36,10 +35,9 @@ MonoBehaviour:
     Size: 0
     chainCount: 0
     sprite: {fileID: 21300000, guid: 582d2cbd9aadda24eb99d70e6b2abf6a, type: 3}
-    skill:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: Gonggi
+    tooltip: At certain intervals, it flies \\n in a straight line toward the enemy
+      \\n and inflicts damage.
+  - name: gonggi
     power: 0
     attackDelay: 0
     range: 0
@@ -49,10 +47,10 @@ MonoBehaviour:
     Size: 0
     chainCount: 0
     sprite: {fileID: 21300000, guid: a6beb50924119bc4b8936bcf5fa8d561, type: 3}
-    skill:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: HongikIngan
+    tooltip: At regular intervals, air is installed \\n on the floor at the player's
+      location. \\n  When a monster steps on it, 5 streams \\n of air explode in
+      all directions.
+  - name: hongikIngan
     power: 0
     attackDelay: 0
     range: 0
@@ -62,10 +60,8 @@ MonoBehaviour:
     Size: 0
     chainCount: 0
     sprite: {fileID: 21300000, guid: ec85ff0d1e7a1fc4aa992c8ad845493e, type: 3}
-    skill:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: Archery
+    tooltip: The spirit of Hongik Ingan is revived!!
+  - name: arrow
     power: 0
     attackDelay: 0
     range: 0
@@ -75,10 +71,8 @@ MonoBehaviour:
     Size: 0
     chainCount: 0
     sprite: {fileID: 21300000, guid: d9937c3ee9423f1479b21a5223a14629, type: 3}
-    skill:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: Gulleongsoe
+    tooltip: The spirit of Hongik \\n Ingan is revived!!
+  - name: gulleongsoe
     power: 0
     attackDelay: 0
     range: 0
@@ -88,6 +82,5 @@ MonoBehaviour:
     Size: 0
     chainCount: 0
     sprite: {fileID: 21300000, guid: 53ae2659c2728e941a0ef170095c2108, type: 3}
-    skill:
-      m_PersistentCalls:
-        m_Calls: []
+    tooltip: A large hoop is summoned at certain \\n intervals. The summoned hoop
+      moves \\n around the field, changing direction \\n approximately every 2 seconds.
