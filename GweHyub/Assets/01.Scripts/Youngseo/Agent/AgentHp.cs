@@ -16,6 +16,7 @@ public class AgentHp : MonoBehaviour
             _curHp = Mathf.Clamp(_curHp, 0, _maxHp);
             if (_curHp <= 0)
             {
+                InitHp();
                 OnDie?.Invoke();
                 if (TryGetComponent(out AIBrain brain))
                 {
@@ -30,6 +31,11 @@ public class AgentHp : MonoBehaviour
     public UnityEvent OnDie;
 
     private void Awake()
+    {
+        InitHp();
+    }
+
+    public void InitHp()
     {
         CurHp = _maxHp;
     }

@@ -8,11 +8,18 @@ public class AIBrain : PoolableMono
     public Transform PlayerTrm;
     public float lastAtkTime = -9999f;
 
+    private AgentHp _agentHp;
+
+    private Transform _visualTrm;
+    private Vector3 _prevScale;
     [SerializeField] private bool _isLookPlayer = true;
 
     private void Awake()
     {
-        PlayerTrm = GameObject.FindWithTag("Player").transform; 
+        PlayerTrm = GameObject.FindWithTag("Player").transform;
+        _agentHp = GetComponent<AgentHp>();
+        _visualTrm = transform.Find("Visual");
+        _prevScale = _visualTrm.localScale;
         
         _states = new();
         GetComponentsInChildren(_states);
@@ -23,7 +30,7 @@ public class AIBrain : PoolableMono
     private void Update()
     {
         _currentState.UpdateState(); //현재 스테이트를 계속 업데이트 해줌
-        LookPlayer();
+        if (_isLookPlayer) LookPlayer();
     }
 
     public void ChangeState(AIState state)
@@ -36,6 +43,7 @@ public class AIBrain : PoolableMono
     public override void Init()
     {
         lastAtkTime = -9999f;
+        _agentHp.InitHp();
     }
 
     public void SetPosition(Vector3 pos)
@@ -44,9 +52,8 @@ public class AIBrain : PoolableMono
         _currentState.OnEnterState();
     }
 
-    private void LookPlayer()
+    public void LookPlayer()
     {
-        if (_isLookPlayer == false) return;
-        transform.localScale = new Vector3(transform.position.x < PlayerTrm.position.x ? -1 : 1, 1, 1);
+        _visualTrm.localScale = new Vector3(_prevScale.x * (transform.position.x < PlayerTrm.position.x ? -1 : 1), _prevScale.y * 1, 1);
     }
 }
